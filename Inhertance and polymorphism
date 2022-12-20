@@ -1,0 +1,40 @@
+class Phone():
+    color = ''
+    brand = ''
+    
+    def phone_color(self):
+        return "" 
+        
+    def has_seperate_assitance(self):
+        return False
+    
+class Samsung(Phone):
+    def phone_color(self):
+        return "Color of the phone is " + self.color
+    def has_seperate_assitance(self):
+        return True
+    
+    
+class Redmi(Phone):
+    def phone_color(self):
+        return "Color of the phone is " + self.color
+    
+def phone_details(phone):
+    print(phone.color)
+    print(phone.brand)
+    print(phone.phone_color())
+    if(phone.has_seperate_assitance() == True):
+        print(phone.brand + " has seperate assitance")
+    else:
+        print(phone.brand + " does not have seperate assitance")
+    print()
+    
+phone = Samsung()
+phone.color = 'Black'
+phone.brand = 'Samsung'
+phone_details(phone)
+
+phone1 = Redmi()
+phone1.color = 'Black'
+phone1.brand = 'Redmi'
+phone_details(phone1)
