@@ -1,0 +1,84 @@
+class Cafe():
+    itemname = ''
+    quantity = 0
+    
+    def get_item_details(self):
+        return f'{self.itemname} : {self.quantity}'
+    
+    def sold_item_quantity(self, qty):
+        return f'{self.itemname} : {qty}'
+    
+    def remaining_item_quantity(self, qty):
+        # print(f'How many  {items.itemname} is remaining? ')
+        remaining_qty = self.quantity - qty
+        print(f'Remaining Quantity {remaining_qty}')
+    
+pizza = Cafe()
+pizza.itemname = 'Pizza'
+pizza.quantity = 100
+
+burger = Cafe()
+burger.itemname = 'Burger'
+burger.quantity = 150
+
+vegroll = Cafe()
+vegroll.itemname = 'Vegroll'
+vegroll.quantity = 200
+
+momo = Cafe()
+momo.itemname = 'Momo'
+momo.quantity = 300
+
+item_list = [pizza, burger, vegroll, momo]
+print("Hello sir, Can You tell me the available items and their quantity? ")
+print("Today's available items & their quantities are: ")
+for items in item_list:
+    print(items.get_item_details())
+        
+for items in item_list:
+    qty = int(input("Enter Sold Quantity "))
+    print(items.sold_item_quantity(qty))
+    
+    
+print("Hello sir, What Information you need about today's sales?")
+print("Please tell me which item's information you need?")
+item = input()
+for items in item_list:
+    if items.itemname == item:
+        qty = int(input("Sold Quantity "))
+        items.remaining_item_quantity(qty)
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+  Output:
+  Hello sir, Can You tell me the available items and their quantity? 
+Today's available items & their quantities are: 
+Pizza : 100
+Burger : 150
+Vegroll : 200
+Momo : 300
+Enter Sold Quantity 50
+Pizza : 50
+Enter Sold Quantity 100
+Burger : 100
+Enter Sold Quantity 140
+Vegroll : 140
+Enter Sold Quantity 250
+Momo : 250
+Please tell me which item's information you need?
+Burger
+Sold Quantity 100
+Remaining Quantity 50
